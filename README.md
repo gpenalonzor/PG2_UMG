@@ -1,2 +1,3 @@
 # PG2_UMG
-Contiene  el desarrollo de un aplicativo web, realizado con el framework de Angular para el Front End 
+******** LOS ARCHIVOS SE ENCUENTRAN EN EL MASTER **********
+Contiene  el desarrollo de un aplicativo web, realizado con el framework de Angular para el Front End, 

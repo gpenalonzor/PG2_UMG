@@ -1,0 +1,104 @@
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <h1 class="mb-0">INGRESO DE NOTAS</h1>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <label class="mb-0" for="idasignacionalumno"><h5><b>ID ASIGNACION DE ALUMNO</b></h5></label>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input class="form-control" type="text" id="idasignacionalumno" (ngModel)="idAsignacionAlumno">
+    </div>
+  </div>
+</div>
+
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <label class="mb-0" for="idtarea"><h5><b>ID TAREA</b></h5></label>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input class="form-control" type="text" id="idtarea" (ngModel)="idTarea">
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <label class="mb-0" for="midexamen"><h5><b>ID EXAMEN</b></h5></label>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input class="form-control" type="text" id="midexamen" (ngModel)="idExamen">
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <label class="mb-0" for="notaalumno"><h5><b>NOTA ALUMNO</b></h5></label>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+     <input class="form-control" type="text" id="notaalumno" (ngModel)="notaAlumno">
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="centrarbutton">
+  <div class="centrarbutton">
+    <button
+    (click)="mostrarDatos()"
+    class="btn btn-success" margin="2">
+    GUARDAR
+    </button>
+  </div>
+  <div class="centrarbutton">
+    <button
+    (click)="eliminarDatos()"
+    class="btn btn-danger">
+    ELIMINAR
+    </button>
+  </div>
+</div>
+
+<br>
+
+
+<!-- <div>
+<h4>ID ASIGNACION CURSO: {{ midAsignacionAlumno  }}</h4>
+<h4>ID TAREA: {{ midTarea }}</h4>
+<h4>ID EXAMEN: {{ midExamen }}</h4>
+<h4>NOTA ALUMNO: {{ mnotaAlumno }}</h4>
+</div> -->

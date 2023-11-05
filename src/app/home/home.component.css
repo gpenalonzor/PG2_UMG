@@ -1,0 +1,75 @@
+body {
+  background-image: url('src/assets/img/Home-img.jpg'); /* Ruta de tu imagen de fondo */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-repeat: no-repeat; /* Evita la repetición de la imagen */
+  background-attachment: fixed; /* Fija la imagen de fondo */
+}
+
+/* Estilos adicionales para el contenido */
+.contenido {
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el contenido */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px; /* Bordes redondeados para el contenido */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra para el contenido */
+  max-width: 1800px;
+}
+
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.galeria-barra {
+  overflow: hidden;
+  width: 100%;
+}
+
+.imagenes-container {
+  display: flex;
+  animation: desplazamiento 20s linear infinite; /* Ajusta la duración según tus necesidades */
+}
+
+@keyframes desplazamiento {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(200%);
+  }
+  75% {
+    transform: translateX(300%);
+  }
+  100% {
+    transform: translateX(0); /* Vuelve al inicio */
+  }
+}
+
+.imagenes-container img {
+  width: 230px; /* Ajusta el tamaño de las imágenes */
+  margin-right: 10px; /* Espacio entre las imágenes */
+}

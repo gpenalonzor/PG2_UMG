@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a EduGestor: Tu Plataforma de Gestión de Notas Escolares</h1>
+    </header>
+
+
+     <div class="contenido" >
+        <h2>Nuestra Aplicacion:</h2>
+        <p> EduGestor es la herramienta definitiva para simplificar y optimizar la gestión de notas en tu escuela. Diseñado con la educación en mente, nuestro software revoluciona la forma en que los educadores, estudiantes y padres interactúan con la información académica. </p>
+
+        <h2>Contacto</h2>
+        <p>Puede ponerse en contacto con nosotros en <a href="mailto:servicioalcliente@edugestor.com">servicioalcliente@edugestor.com</a>.</p>
+      </div>
+
+      <div class="contenido">
+      <div class="galeria-barra">
+        <div class="imagenes-container">
+          <img *ngFor="let imagen of imagenes" [src]="imagen" alt="Imagen">
+        </div>
+      </div>
+    </div>
+
+
+    <footer>
+        &copy; 2023 Todos los Derechos Reservados
+    </footer>
+</body>
+</html>

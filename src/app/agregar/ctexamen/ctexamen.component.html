@@ -1,0 +1,59 @@
+<div>
+  <h1>INGRESO DE EXAMEN</h1>
+</div>
+
+<div>
+  <label for="idexamen">ID EXAMEN</label>
+  <input type="text" id="idexamen" (ngModel)="miExamen.idExamen">
+</div>
+<br>
+<div>
+  <label for="idcatedratico">ID CATEDRATICO</label>
+  <input type="text" id="idcatedratico" (ngModel)="miExamen.idCatedratico">
+</div>
+<br>
+<div>
+  <label for="idgrado">ID GRADO</label>
+  <input type="text" id="idgrado" (ngModel)="miExamen.idGrado">
+</div>
+<br>
+<div>
+  <div>
+    <label for="idseccion">ID SECCION</label>
+    <input type="text" id="idseccion" (ngModel)="miExamen.idSeccion">
+  </div>
+  <br>
+  <div>
+    <Label for="idcurso">ID CURSO</Label>
+    <input type="text" id="idcurso" (ngModel)="miExamen.idCurso">
+  </div>
+  <br>
+  <div>
+    <label for="punteo">PUNTEO</label>
+    <input type="number" id="punteo" (ngModel)="miExamen.Punteo">
+  </div>
+  <br>
+  <div>
+    <label for="fecha_inicio">FECHA INICIO</label>
+    <input type="datetime" id="fecha_inicio" (ngModel)="miExamen.Fecha_Inicio">
+  </div>
+  <br>
+  <div>
+    <label for="fecha_fin">FECHA FIN</label>
+    <input type="datetime" id="fecha_fin" (ngModel)="miExamen.Fecha_Fin">
+  </div>
+  <br>
+  <div>
+    <label for="descripcionexamen">DESCRIPCION</label>
+    <input type="text" id="descripcionexamen" (ngModel)="miExamen.DescripcionExamen">
+  </div>
+  <br><br>
+  <div>
+    <button (click)="mostrarDatos()" class="btn btn-success">
+      MOSTRAR DATOS
+    </button>
+  </div>
+  <button (click)="agregar()">Agregar</button>
+  <button *ngFor="let elemento of elementos; let i = index" (click)="editar(elemento)">Editar</button>
+  <button *ngFor="let elemento of elementos; let i = index" (click)="eliminar(elemento)">Eliminar</button>
+

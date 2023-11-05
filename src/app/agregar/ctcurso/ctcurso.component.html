@@ -1,0 +1,89 @@
+<br>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <h1 class="mb-0">INGRESO DE CURSOS</h1>
+    </div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <label class="mb-0" for="idcurso"><h5><b>ID CURSO</b></h5></label>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input class="form-control" type="text" id="idcurso" (ngModel)="idCurso">
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <label class="mb-0" for="nombrecurso"><h5><b>NOMBRE DEL CURSO</b></h5></label>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input class="form-control" type="text" id="nombrecurso" (ngModel)="nombreCurso">
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <label class="mb-0" for="descripcioncurso"><h5><b>DESCRIPCION DEL CURSO</b></h5></label>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input class="form-control" type="text" id="descripcioncurso" (ngModel)="descripcionCurso">
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="centrarbutton">
+  <div class="centrarbutton">
+    <button
+    (click)="mostrarDatos()"
+    class="btn btn-success" margin="2">
+    GUARDAR
+    </button>
+  </div>
+  <div class="centrarbutton">
+    <button
+    (click)="eliminarDatos()"
+    class="btn btn-danger">
+    ELIMINAR
+    </button>
+  </div>
+</div>
+
+<br>
+
+
+<!-- <div>
+<h4>ID CURSO: {{ midCurso }}</h4>
+<h4>NOMBRE DEL CURSO: {{ mnombreCurso }}</h4>
+<h4>DESCRIPCION DEL CURSO: {{ mdescripcionCurso }}</h4>
+</div> -->
+

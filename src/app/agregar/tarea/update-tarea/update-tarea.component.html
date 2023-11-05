@@ -1,0 +1,85 @@
+<div class="col-md-6 offset-md-3">
+  <h3 class="text-center">Edte su Tarea</h3>
+  <form (ngSubmit)= "onSubmit()" #empleadoForm = "ngForm">
+    <div class="form-group">
+      <label>Tarea # </label>
+      <input type = "number"
+      class="form-control"
+      id = "id"
+      [(ngModel)] = "editartarea.ida"
+      name = "id"
+      placeholder="edite ID"
+      #nombre = "ngModel"
+      >
+    </div>
+    <div class="form-group">
+      <label>Catedratico </label>
+      <input type = "text"
+      class="form-control"
+      id = "catedratico"
+      [(ngModel)] = "editartarea.catedratico"
+      name = "catedratico"
+      placeholder="edite catedratico"
+      #nombre = "ngModel"
+      >
+    </div>
+    <div class="form-group">
+      <label>Grado </label>
+      <input type = "text"
+      class="form-control"
+      id = "grado"
+      [(ngModel)] = "editartarea.grado"
+      name = "grado"
+      placeholder="edite Grado"
+      #nombre = "ngModel"
+      >
+    </div>
+    <div class="form-group">
+      <label>Seccion </label>
+      <input type = "text"
+      class="form-control"
+      id = "seccion"
+      [(ngModel)] = "editartarea.seccion"
+      name = "seccion"
+      placeholder="edite Seccion"
+      #nombre = "ngModel"
+      >
+    </div>
+    <div class="form-group">
+      <label>Descripcion </label>
+      <input type = "text"
+      class="form-control"
+      id = "descripcion"
+      [(ngModel)] = "editartarea.descripcion"
+      name = "id"
+      placeholder="edite descripcion"
+      #nombre = "ngModel"
+      >
+    </div>
+    <div class="form-group">
+      <label>Puntuacion </label>
+      <input type = "number"
+      class="form-control"
+      id = "puntuacion"
+      [(ngModel)] = "editartarea.puntuacion"
+      name = "puntuacion"
+      placeholder="edite puntuacion de tarea"
+      #nombre = "ngModel"
+      >
+    </div>
+    <div class="form-group">
+      <label>Fecha de Entrega </label>
+      <input type = "text"
+      class="form-control"
+      id = "fecha_entrega"
+      [(ngModel)] = "editartarea.fecha_entrega"
+      name = "fecha_entrega"
+      placeholder="edite Fecha de Entrega"
+      #nombre = "ngModel"
+      >
+    </div>
+
+    <button class="btn btn-success">Guardar</button>
+    <button class="btn btn-secondary" (click)="irAlaListaDeTareas()">Regresar a listado </button>
+  </form>
+</div>

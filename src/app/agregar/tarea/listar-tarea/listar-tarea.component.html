@@ -1,0 +1,51 @@
+
+<hr>
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <h3>Mostrando Lista de Tareas </h3>
+    </div>
+    <div class="card-body">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Tarea #</th>
+            <th scope="col">Catedratico</th>
+            <th scope="col">Grado</th>
+            <th scope="col">Seccion</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Puntuacion</th>
+            <th scope="col">Fecha Entrega</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tarea of tablaValores; let i = index ">
+            <th>{{tarea.ida}}</th>
+            <td>{{tarea.catedratico}}</td>
+            <td>{{tarea.grado}}</td>
+            <td>{{tarea.seccion}}</td>
+            <th>{{tarea.descripcion}}</th>
+            <td>{{tarea.puntuacion}}</td>
+            <td>{{tarea.fecha_entrega}}</td>
+            <td>
+              <button type="button" class="btn btn-danger">Eliminar</button>
+              <button type="button" (click)="actualizarTarea(i)" class="btn btn-warning" style="margin-left: 10px;">Editar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <button type="button"
+      class="btn btn btn-secondary"
+      style="padding: 15px; "
+      (click)="ir_nueva_tarea()"
+   >Agregar Nueva Tarea</button>
+</div>
+
+
+<hr>

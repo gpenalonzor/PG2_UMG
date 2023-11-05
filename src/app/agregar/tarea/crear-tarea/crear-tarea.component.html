@@ -1,0 +1,68 @@
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="mb-4">Formulario Crear Tareas</h2>
+      <form (ngSubmit)="onSubmit()">
+        <div class ="form-group" >
+          <label> Identificador de Tarea</label>
+          <input
+            type="number"
+            class="form-control"
+            id="ida"
+            name="ida"
+            [(ngModel)]="Agregar_Tarea.ida" required>
+        </div>
+        <div >
+          <label>Catedratico que Asigna</label>
+          <input
+            type="text"
+            class="form-control"
+            id="catedratico"
+            name="catedratico"
+            [(ngModel)]="Agregar_Tarea.catedratico"
+            required>
+        </div>
+        <div class="mb-1">
+          <label >Grado</label>
+          <select id="Grado" name="grado" class="form-control" [(ngModel)]="Agregar_Tarea.grado">
+            <option value="Primero Primaria">1ro Primaria</option>
+            <option value="Segundo Primaria">2do Primaria</option>
+            <option value="Tercero Primaria">3ro Primaria</option>
+            <option value="Cuarto Primaria">4to Primaria</option>
+            <option value="Quinto Primaria">5to Primaria</option>
+            <option value="Sexto Primaria">6to Primaria</option>
+          </select>
+        </div>
+        <div class="mb-1">
+          <label >Seccion </label>
+          <select id="seccion" name="seccion" class="form-control" [(ngModel)]="Agregar_Tarea.seccion">
+            <option value="A">Seccion A</option>
+            <option value="B">Seccion B</option>
+            <option value="C">Seccion C</option>
+            <option value="D">Seccion D</option>
+          </select>
+        </div>
+        <div class="mb-1">
+          <label >Descripcion de Tarea</label>
+          <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="Agregar_Tarea.descripcion"
+            required>
+        </div>
+        <div class="mb-1">
+          <label >Puntuacion</label>
+          <input type="number" class="form-control" id="puntuacion" name="puntuacion" [(ngModel)]="Agregar_Tarea.puntuacion" required>
+        </div>
+        <div class="mb-1">
+          <label>Fecha de Entrega:</label><br>
+          <input type="text" id="fecha_entrega" name="fecha_entrega" class="form-control" [(ngModel)]="Agregar_Tarea.fecha_entrega"
+            required>
+        </div>
+        <button type="submit" class="btn btn-success" >Guardar </button>
+        <button type="submit" class="btn btn-dark" style="margin-left: 10px;" (click)="Listar_Tareas()">Listar Todas Las Tareas </button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<hr>

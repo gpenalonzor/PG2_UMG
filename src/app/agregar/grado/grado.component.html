@@ -1,0 +1,84 @@
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="mb-4">Formulario Agregar Grado</h2>
+      <form   >
+        <div class="mb-1">
+          <label for="tarea" class="form-label">Identificador de Grado</label>
+          <input type="text" class="form-control" id="Id" name="idtarea" [(ngModel)]="valorIdentificadorGrado" required>
+        </div>
+        <div class="mb-1">
+          <label for="Grado">Grado</label>
+          <select id="Grado" name="Grado" class="form-control" [(ngModel)]="valorGrado" >
+              <option value="Primero Primaria">1ro Primaria</option>
+              <option value="Segundo Primaria">2do Primaria</option>
+              <option value="Tercero Primaria">3ro Primaria</option>
+              <option value="Cuarto Primaria">4to Primaria</option>
+              <option value="Quinto Primaria">5to Primaria</option>
+              <option value="Sexto Primaria">6to Primaria</option>
+              <option value="1ro Basico">1ro Basico</option>
+              <option value="2ro Basico">2do Basico</option>
+              <option value="3ro Basico">3ro Basico</option>
+              <option value="4to Bachillerato">4to Bachillerato</option>
+              <option value="5to Bachillerato">5to Bachillerato</option>
+          </select>
+        </div>
+        <div class="mb-1">
+          <label for="catedratico" class="form-label">Catedratico Guia</label>
+          <input type="text" class="form-control" id="catedratico" name="catedratico" [(ngModel)]="valorCatedraticoGuia" required>
+        </div>
+        <div class="mb-1">
+          <label for="seccion">Seccion </label>
+          <select id="seccion" name="seccion" class="form-control" [(ngModel)]="valorSeccion" >
+              <option value="A">Seccion A</option>
+              <option value="B">Seccion B</option>
+              <option value="C">Seccion C</option>
+              <option value="D">Seccion D</option>
+          </select>
+          </div>
+        <div class="mb-1">
+          <label for="Descripcion" class="form-label">Comentario</label>
+          <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="valorcomentario"  required>
+        </div>
+        <div class="mb-1">
+          <label for="edad" class="form-label">Cupo Alumnos</label>
+          <input type="number" class="form-control" id="puntuacion" name="puntuacion" [(ngModel)]="valorCupoAlumnos"  required>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="AgregarValoresTabla()" >Guardar </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class=" justify-content-center">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id Grado</th>
+      <th scope="col">Grado</th>
+      <th scope="col">Catedratico Guia</th>
+      <th scope="col">Seccion</th>
+      <th scope="col">Descripcion</th>
+      <th scope="col">Puntuacion</th>
+      <th scope="col">Fecha Entrega</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of tablaValores; let i = index ">
+      <th>{{item.valorIdentificadorGrado}}</th>
+      <td>{{item.valorGrado}}</td>
+      <td>{{item.valorCatedraticoGuia}}</td>
+      <td>{{item.valorSeccion}}</td>
+      <th>{{item.valorcomentario}}</th>
+      <td>{{item.valorCupoAlumnos}}</td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="eliminarFila(i)">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+

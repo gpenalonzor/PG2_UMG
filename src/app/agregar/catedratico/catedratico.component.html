@@ -1,0 +1,91 @@
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+  crossorigin="anonymous">
+
+
+<body>
+  <div class="row justify-content-center">
+  <div class="col-md-8">
+  <h2 class="mb-4">Formulario de Registro de Catedraticos</h2>
+  <form #catedraticoForm="ngForm" (ngSubmit)="agregarCatedratico()">
+    <div class="form-group">
+      <label for="id_catedratico">ID Catedrático:</label><br>
+      <label for="id_catedratico">{{ registro }}</label><br>
+    </div>
+    <div class="form-group">
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombre_catedratico" name="nombre_catedratico" class="form-control" [(ngModel)]="nombre_catedratico" required>
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido:</label><br>
+      <input type="text" id="apellido_catedratico" name="apellido_catedratico" class="form-control" [(ngModel)]="apellido_catedratico" required>
+    </div>
+    <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="fecha_nac">Fecha de Nacimiento:</label><br>
+      <input type="date" id="fecha_nac_catedratico" name="fecha_nac_catedratico" class="form-control" [(ngModel)]="fecha_nac_catedratico" required>
+    </div>
+    <div class="form-group">
+      <label for="nacionalidad">Nacionalidad:</label><br>
+      <input type="text" id="nacionalidad_catedratico" name="nacionalidad_catedratico" class="form-control" [(ngModel)]="nacionalidad_catedratico" required>
+    </div>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="cui">CUI:</label><br>
+      <input type="text" id="cui_catedratico" name="cui_catedratico" class="form-control" [(ngModel)]="cui_catedratico" required>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="sexo">Sexo:</label>
+      <select id="sexo" name="sexo_catedratico" class="form-control" [(ngModel)]="sexo_catedratico">
+          <option value="m">M</option>
+          <option value="f">F</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="rol">Rol:</label>
+      <select id="rol" name="rol_catedratico" class="form-control" [(ngModel)]="rol_catedratico">
+          <option value="usuario">Usuario</option>
+          <option value="administrador">Administrador</option>
+      </select>
+    </div>
+      <input type="submit" value="Guardar" class="btn btn-primary">
+  </form>
+
+  <br><br>
+  <div class=" justify-content-center">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+          <th scope="col">ID Catedrático</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Fecha de Nacimiento</th>
+          <th scope="col">Nacionalidad</th>
+          <th scope="col">CUI</th>
+          <th scope="col">Rol</th>
+          <th scope="col">Sexo</th>
+          <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let catedratico of catedratico">
+          <td>{{ catedratico.id_catedratico }}</td>
+          <td>{{ catedratico.nombre_catedratico }}</td>
+          <td>{{ catedratico.apellido_catedratico }}</td>
+          <td>{{ catedratico.fecha_nac_catedratico }}</td>
+          <td>{{ catedratico.nacionalidad_catedratico }}</td>
+          <td>{{ catedratico.cui_catedratico }}</td>
+          <td>{{ catedratico.rol_catedratico }}</td>
+          <td>{{ catedratico.sexo_catedratico }}</td>
+          <td>
+              <!--<button class="btn btn-warning" href="Modificar-Catedratico" (click)="modificarCatedratico()">Modificar</button> -->
+              <button class="btn btn-danger" (click)="eliminarCatedratico(catedratico)">Eliminar</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+</div>
+</body>
